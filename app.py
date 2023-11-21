@@ -29,7 +29,6 @@ app = Flask(__name__)
 def index():
     render_template('template.html')
 
-
     # URL for Barcelona Neighborhoods data for mapping
     url_barris = "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e/download"
     barri_geo_df=pd.read_csv(url_barris)
@@ -225,7 +224,7 @@ def index():
 
     # Create map
     barcelona_coords = [41.386, 2.19]
-    map_bcn = folium.Map(location=barcelona_coords,tiles='CartoDB positron', zoom_start=11.5)
+    map_bcn = folium.Map(location=barcelona_coords,tiles='CartoDB positron', zoom_start=11.5, height="100%")
 
     icon_url_1 = "https://cdn-icons-png.flaticon.com/512/7618/7618214.png"
     icon_url_2 = "https://cdn-icons-png.flaticon.com/512/998/998718.png"
