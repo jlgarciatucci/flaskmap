@@ -4,7 +4,7 @@ folium==0.15.0
 geopandas==0.10.2
 matplotlib==3.5.3
 numpy
-pandas==1.3.5
+pandas==1.5.3
 Requests==2.31.0
 seaborn==0.13.0
 Shapely==2.0.2
