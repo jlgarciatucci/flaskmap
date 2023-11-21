@@ -40,22 +40,12 @@ app = Flask(__name__)
 @app.route("/")
 
 
-
-
 def index():
 
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
+    render_template('template.html')
 
-    # In your templates directory, create a mobile version of your site (mobile.index.html).
-    # Likewise, add your desired desktop template as well (desktop.index.html).
-
-    if "iphone" in user_agent:
-        return render_template('template.html')
-    elif "android" in user_agent:
-        return render_template('template.html')
-    else:
-        return render_template('template.html')
 
     # URL for Barcelona Neighborhoods data for mapping
     url_barris = "https://opendata-ajuntament.barcelona.cat/data/dataset/808daafa-d9ce-48c0-925a-fa5afdb1ed41/resource/b21fa550-56ea-4f4c-9adc-b8009381896e/download"
