@@ -118,11 +118,6 @@ for feature in mercatsifires_geo_json["features"]:
 mercatsifires_geo_json = mercatsifires_geo_json
 
 
-file_path = "mercatsifires_geo_json.json"
-
-with open(file_path, 'w') as file:
-    json.dump(mercatsifires_geo_json, file)
-
 connect_opendata = http.client.HTTPSConnection("opendata-ajuntament.barcelona.cat")
 
 headers = {
@@ -156,10 +151,6 @@ for feature in mercatsmun_geo_json["features"]:
 # The modified GeoJSON data is now ready
 mercatsmun_geo_json = mercatsmun_geo_json
 
-file_path = "mercatsmun_geo_json.json"
-
-with open(file_path, 'w') as file:
-    json.dump(mercatsmun_geo_json, file)
 
 connect_opendata = http.client.HTTPSConnection("opendata-ajuntament.barcelona.cat")
 
@@ -195,10 +186,6 @@ for feature in granscentres_geo_json["features"]:
 granscentres_geo_json = granscentres_geo_json
 
 
-file_path = "granscentres_geo_json.json"
-
-with open(file_path, 'w') as file:
-    json.dump(granscentres_geo_json, file)
 
 connect_opendata = http.client.HTTPSConnection("opendata-ajuntament.barcelona.cat")
 
@@ -233,10 +220,6 @@ for feature in galeries_geo_json["features"]:
 # The modified GeoJSON data is now ready
 galeries_geo_json = galeries_geo_json
 
-file_path = "galeries_geo_json.json"
-
-with open(file_path, 'w') as file:
-    json.dump(galeries_geo_json, file)
 
 
 # Function to add GeoJSON points to the map with custom icons
