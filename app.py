@@ -55,11 +55,6 @@ def index():
 
     json_barri_geo
 
-    file_path = "barris_geo_json.json"
-
-    with open(file_path, 'w') as file:
-        file.write(json_barri_geo)
-
     def convert_to_geojson(data):
         features = []
         for record in data['result']['records']:
