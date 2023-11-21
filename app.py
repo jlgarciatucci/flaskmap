@@ -27,7 +27,7 @@ app = Flask(__name__)
 
 
 def index():
-    render_template('/template.html')
+    render_template('template.html')
 
 
     # URL for Barcelona Neighborhoods data for mapping
