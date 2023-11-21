@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import folium
 import pandas as pd
 import geopandas as gpd
@@ -10,26 +10,12 @@ import requests
 from pandas import json_normalize
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.colors
 import folium
-from folium.features import DivIcon
-from branca.element import Template, MacroElement
-import statistics
-import seaborn as sns
-from matplotlib import cbook
-
-# Standard library imports
 import json
-import warnings
-
-# Third-party imports
 import folium
 import geopandas as gpd
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from folium import Figure, IFrame, plugins
 from folium.plugins import DualMap, HeatMap, MarkerCluster
 from shapely import wkt
@@ -41,10 +27,7 @@ app = Flask(__name__)
 
 
 def index():
-
-    user_agent = request.headers.get('User-Agent')
-    user_agent = user_agent.lower()
-    render_template('template.html')
+    render_template('/template.html')
 
 
     # URL for Barcelona Neighborhoods data for mapping
